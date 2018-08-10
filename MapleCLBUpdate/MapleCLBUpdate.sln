@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapleCLBUpdate", "MapleCLBUpdate\MapleCLBUpdate.csproj", "{0CFF41C9-579F-4B4C-A8D4-DFF1F513E5A8}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MapleLib", "MapleCLBUpdate\MapleLib\MapleLib.shproj", "{78A7284E-C54B-4B98-8573-4AF8E0243C71}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedTools", "MapleCLBUpdate\SharedTools\SharedTools.shproj", "{83C9EA29-2F0F-431B-96B6-1707F72E8062}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MapleCLBUpdate\MapleLib\MapleLib.projitems*{0cff41c9-579f-4b4c-a8d4-dff1f513e5a8}*SharedItemsImports = 4
+		MapleCLBUpdate\SharedTools\SharedTools.projitems*{0cff41c9-579f-4b4c-a8d4-dff1f513e5a8}*SharedItemsImports = 4
+		MapleCLBUpdate\MapleLib\MapleLib.projitems*{78a7284e-c54b-4b98-8573-4af8e0243c71}*SharedItemsImports = 13
+		MapleCLBUpdate\SharedTools\SharedTools.projitems*{83c9ea29-2f0f-431b-96b6-1707f72e8062}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CFF41C9-579F-4B4C-A8D4-DFF1F513E5A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CFF41C9-579F-4B4C-A8D4-DFF1F513E5A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CFF41C9-579F-4B4C-A8D4-DFF1F513E5A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CFF41C9-579F-4B4C-A8D4-DFF1F513E5A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DA8F712-E1CC-4B51-933C-82AE474CB449}
+	EndGlobalSection
+EndGlobal

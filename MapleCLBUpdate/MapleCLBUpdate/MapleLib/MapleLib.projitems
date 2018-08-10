@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>78a7284e-c54b-4b98-8573-4af8e0243c71</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MapleLib</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Connector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Crypto\AesCipher.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Crypto\MapleCipher.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Crypto\TripleDESCipher.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Packet\PacketReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Packet\PacketWriter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ServerInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Session.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WebAPI.cs" />
+  </ItemGroup>
+</Project>

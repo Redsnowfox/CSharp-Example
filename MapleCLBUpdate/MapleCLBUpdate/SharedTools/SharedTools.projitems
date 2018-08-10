@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>83c9ea29-2f0f-431b-96b6-1707f72e8062</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SharedTools</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Blocking.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BlockingLinkedList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Crc32.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EncryptedStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Hash.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HexEncoding.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MultiKeyDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Precondition.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Win32.cs" />
+  </ItemGroup>
+</Project>

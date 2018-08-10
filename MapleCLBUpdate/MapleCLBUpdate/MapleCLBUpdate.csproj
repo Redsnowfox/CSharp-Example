@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CFF41C9-579F-4B4C-A8D4-DFF1F513E5A8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MapleCLBUpdate</RootNamespace>
+    <AssemblyName>MapleCLBUpdate</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Costura, Version=2.0.1.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Costura.Fody.2.0.1\lib\net452\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Annotations, Version=11.1.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.11.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.3.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.3.0-alpha0025\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\ClientForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RusherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RusherForm.Designer.cs">
+      <DependentUpon>RusherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapleClient\Client.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapleClient\Functions\MapRusher.cs" />
+    <Compile Include="MapleClient\Handlers\Handler.cs" />
+    <Compile Include="MapleClient\Handlers\HandShake.cs" />
+    <Compile Include="MapleClient\Handlers\Packet.cs" />
+    <Compile Include="MapleClient\Scripts\FarmScript.cs" />
+    <Compile Include="MapleClient\Scripts\NewFarmScript.cs" />
+    <Compile Include="Packets\Ops.cs" />
+    <Compile Include="Packets\Recv\Connection\Login.cs" />
+    <Compile Include="Packets\Recv\Connection\PortIp.cs" />
+    <Compile Include="Packets\Recv\Connection\Request.cs" />
+    <Compile Include="Packets\Recv\Load.cs" />
+    <Compile Include="Packets\Recv\Map\Mob.cs" />
+    <Compile Include="Packets\Recv\Map\Rune.cs" />
+    <Compile Include="Packets\Recv\Map\Summon.cs" />
+    <Compile Include="Packets\Recv\Updates.cs" />
+    <Compile Include="Packets\Send\Attack.cs" />
+    <Compile Include="Packets\Send\Chat.cs" />
+    <Compile Include="Packets\Send\Familiar.cs" />
+    <Compile Include="Packets\Send\General.cs" />
+    <Compile Include="Packets\Send\Login.cs" />
+    <Compile Include="Packets\Send\Portal.cs" />
+    <Compile Include="Packets\Send\RuneRequests.cs" />
+    <Compile Include="Resources\Exp.cs" />
+    <Compile Include="Resources\GameConstants.cs" />
+    <Compile Include="Resources\Maps.cs" />
+    <Compile Include="ScriptLib\Script.cs" />
+    <Compile Include="ScriptLib\ScriptManager.cs" />
+    <Compile Include="ScriptLib\UserScript.cs" />
+    <Compile Include="Types\MapNode.cs" />
+    <Compile Include="Types\Map\Drop.cs" />
+    <Compile Include="Types\Map\Map.cs" />
+    <Compile Include="Packets\Recv\Map\NonPlayer.cs" />
+    <Compile Include="Packets\Recv\Map\Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Types\Account.cs" />
+    <Compile Include="Types\Info.cs" />
+    <Compile Include="Types\Items\Equip.cs" />
+    <Compile Include="Types\Items\Inventory.cs" />
+    <Compile Include="Types\Items\Item.cs" />
+    <Compile Include="Types\Items\Other.cs" />
+    <Compile Include="Types\Mapler.cs" />
+    <Compile Include="Types\Map\MapObject.cs" />
+    <Compile Include="Types\Map\Mob.cs" />
+    <Compile Include="Types\Map\NonPlayerType.cs" />
+    <Compile Include="Types\Map\Player.cs" />
+    <Compile Include="Types\Map\Reactor.cs" />
+    <Compile Include="Types\Map\Rune.cs" />
+    <Compile Include="Types\Map\Shop.cs" />
+    <Compile Include="Types\Map\Summon.cs" />
+    <Compile Include="Types\Position.cs" />
+    <Compile Include="Types\Settings.cs" />
+    <EmbeddedResource Include="Forms\ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RusherForm.resx">
+      <DependentUpon>RusherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Resources\Map\name.map" />
+    <EmbeddedResource Include="Resources\Map\node.map" />
+    <EmbeddedResource Include="Resources\Map\spawnPoints.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="MapleLib\MapleLib.projitems" Label="Shared" />
+  <Import Project="SharedTools\SharedTools.projitems" Label="Shared" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.3.0.3\build\Fody.targets" Condition="Exists('..\packages\Fody.3.0.3\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.3.0.3\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.3.0.3\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.2.0.1\build\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.2.0.1\build\Costura.Fody.targets'))" />
+  </Target>
+  <Import Project="..\packages\Costura.Fody.2.0.1\build\Costura.Fody.targets" Condition="Exists('..\packages\Costura.Fody.2.0.1\build\Costura.Fody.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
